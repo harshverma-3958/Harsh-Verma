@@ -1,0 +1,5 @@
+ksh
+ssh oracle@${inputMap.TargetHostNm} -t "export var=${inputMap.DBInstanceName}; ksh"
+source /oracle/local/scripts/oracle.kshrc
+echo $var
+/oracle/local/scripts/space_heal.ksh $var
